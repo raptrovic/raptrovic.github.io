@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-mode">
 
 <head>
   <meta charset="utf-8">
@@ -31,7 +31,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link id="custom-css" class="light" href="assets/css/style-light.css" rel="stylesheet">
 </head>
 
 <body>
@@ -348,6 +348,11 @@
     </div>
   </section><!-- End Contact Section -->
 
+  <!-- Floating button -->
+  <div class="floating-button">
+      <a href="#" class="switch-mode-white" id="switch-mode"><i class="bi bi-lightbulb-fill"></i></a>
+  </div>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -359,6 +364,34 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <style>
+    /* Add basic styling to the button */
+    .switch-mode-dark {
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+    .switch-mode-white {
+        display: inline-block;
+        padding: 10px 20px;
+        color: black;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+    /* Style the floating button container */
+    .floating-button {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed for the desired distance from the bottom */
+        left: 20px; /* Adjust as needed for the desired distance from the right */
+        z-index: 1000; /* Make sure it appears above other content */
+        font-size: 2em;
+    }
+  </style>
 
 </body>
 

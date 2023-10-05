@@ -45,6 +45,27 @@
     })
   }
 
+  on('click', '#switch-mode', function(e) {
+    var linkElement = document.getElementById("custom-css");
+    var switchBtn = document.getElementById("switch-mode");
+
+    if (linkElement.classList.contains("light")) {
+      linkElement.href = 'assets/css/style.css';
+      linkElement.classList.remove("light");
+      linkElement.classList.add("dark");
+
+      switchBtn.classList.remove("switch-mode-white");
+      switchBtn.classList.add("switch-mode-dark");
+    } else {
+      linkElement.href = 'assets/css/style-light.css';
+      linkElement.classList.remove("dark");
+      linkElement.classList.add("light");
+
+      switchBtn.classList.remove("switch-mode-dark");
+      switchBtn.classList.add("switch-mode-white");
+    }
+  })
+
   /**
    * Mobile nav toggle
    */

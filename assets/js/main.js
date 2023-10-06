@@ -48,6 +48,7 @@
   on('click', '#switch-mode', function(e) {
     var linkElement = document.getElementById("custom-css");
     var switchBtn = document.getElementById("switch-mode");
+    var switchIcon = document.getElementById("switch-mode-icon");
 
     if (linkElement.classList.contains("light")) {
       linkElement.href = 'assets/css/style.css';
@@ -56,6 +57,9 @@
 
       switchBtn.classList.remove("switch-mode-white");
       switchBtn.classList.add("switch-mode-dark");
+
+      switchIcon.classList.remove("bi-moon-stars-fill");
+      switchIcon.classList.add("bi-brightness-high");
     } else {
       linkElement.href = 'assets/css/style-light.css';
       linkElement.classList.remove("dark");
@@ -63,6 +67,9 @@
 
       switchBtn.classList.remove("switch-mode-dark");
       switchBtn.classList.add("switch-mode-white");
+
+      switchIcon.classList.remove("bi-brightness-high");
+      switchIcon.classList.add("bi-moon-stars-fill");
     }
   })
 
